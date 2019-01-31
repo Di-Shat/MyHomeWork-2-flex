@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html body{
+    display: flex;  
+    flex-direction: column;
+    height:100%;
+    min-height: 100vh;
+}
+header,footer{
+    height: 80px;
+    background: rgba(7, 6, 6, 0.699);
+    text-align: center;
+    padding-top: 25px;
+}
+header h1{
+    font-size: 45px;
+    color: rgba(235, 255, 255, 0.747);
+}
+nav{
+    height: 80px;
+    background: rgba(71, 65, 65, 0.521);
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding-top: 25px;
+    font-size: 20px;
+}
+nav ul li{
+    border: 1px solid black;
+    background:rgb(138, 112, 112);
+}
+nav ul li a{
+    padding: 20px 30px;
+    text-decoration: none;
+    color: rgba(145, 45, 41, 0.849);
+}
+nav li a:hover{
+    color: blue;
+}
+main{
+    flex: 1;
+    display: flex;
+}
+.content{
+    display:flex;
+    flex-direction:column; 
+    flex:5;
+}
+.content section,article{
+    padding: 40px 20px;
+    text-indent: 30px;
+    line-height: 1.5em;
+}
+.content p{
+    font-size: 20px;
+}
+aside{
+    background:rgba(37, 34, 34, 0.308);
+    flex: 1;
+}
+aside ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+aside ul li{
+    margin-top: 60px;
+    font-size: 18px;
+}
+aside ul li a{
+    text-decoration: none;
+    color: rgba(145, 45, 41, 0.849);
+}
+aside ul li a:hover{
+    color: bisque;
+}
+section,article{
+    flex:1;
+}
+section{
+    background:rgb(238, 228, 228);
+}
+article{
+    background: rgba(209, 181, 181, 0.589);
+}
+footer{
+}
+@media screen and (max-width: 600px) {           
+    body{
+        min-height: 100vh;
+    }
+    header h1{
+        font-size: 30px;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    nav ul{
+        flex-wrap: wrap;
+    }
+    .content p{
+        font-size: 15px;
+    }
+    main {
+        flex-direction: column;
+        min-height: 100%;
+        flex: 1;
+    }
+    .content{
+        flex-direction: column;
+    }
+    aside{
+        display: flex;
+        flex-direction: column;
+        padding:30px 0px;
+        height: auto;
+    }
+    aside ul{
+       flex-wrap: wrap; 
+    }
+    aside ul li{
+        margin: 15px;
+    }
+    footer{
+        height: 50px;;
+    }
+}
